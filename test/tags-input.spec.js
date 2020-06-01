@@ -831,6 +831,43 @@ describe('tags-input directive', () => {
     });
   });
 
+  describe('inputId option', function() {
+      it('sets the input field id', function() {
+          // Arrange/Act
+          compile('input-id="1"');
+
+          // Assert
+          expect(getInput().attr('id')).toBe('1');
+      });
+
+      it('initializes the option to empty', function() {
+          // Arrange/Act
+          compile();
+
+          // Assert
+          expect(isolateScope.options.inputId).toBe('');
+      });
+  });
+
+  describe('aria-label option', function() {
+      it('sets the field aria-label', function() {
+          // Arrange/Act
+          compile('aria-label="my label"');
+
+          // Assert
+          expect(getInput().attr('aria-label')).toBe('my label');
+      });
+
+      it('initializes the option to empty', function() {
+          // Arrange/Act
+          compile();
+
+          // Assert
+          expect(isolateScope.options.ariaLabel).toBe('');
+      });
+  });
+
+
   describe('placeholder option', () => {
     it('sets the input\'s placeholder text', () => {
       // Arrange/Act
