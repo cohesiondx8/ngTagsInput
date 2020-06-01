@@ -184,7 +184,7 @@ export default function TagsInputDirective($timeout, $document, $window, $q, tag
         type: [String, 'text', validateType],
         placeholder: [String, 'Add a tag'],
         inputId:[String, ''],
-        ariaLabel:[String,'']
+        ariaLabel:[String,''],
         tabindex: [Number, null],
         removeTagSymbol: [String, String.fromCharCode(215)],
         replaceSpacesWithDashes: [Boolean, true],
