@@ -160,6 +160,7 @@ export default function TagsInputDirective($timeout, $document, $window, $q, tag
     restrict: 'E',
     require: 'ngModel',
     scope: {
+      inputId: '=',
       tags: '=ngModel',
       text: '=?',
       templateScope: '=?',
@@ -183,7 +184,6 @@ export default function TagsInputDirective($timeout, $document, $window, $q, tag
         template: [String, 'ngTagsInput/tag-item.html'],
         type: [String, 'text', validateType],
         placeholder: [String, 'Add a tag'],
-        inputId:[String, ''],
         ariaLabel:[String,''],
         tabindex: [Number, null],
         removeTagSymbol: [String, String.fromCharCode(215)],
